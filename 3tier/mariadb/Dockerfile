@@ -1,6 +1,6 @@
 FROM  mysql:latest
 LABEL app="mysql"
-LABEL Author="Anup"
+LABEL Author="Karan"
 
 RUN chown -R mysql:root /var/lib/mysql/
 
