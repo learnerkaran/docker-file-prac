@@ -1,0 +1,13 @@
+services:
+      boxerdeploy:
+              build: .
+              ports: 
+                - '80:80'
+              container_name: apache2-boxer-deploy
+              volume:
+                - myapp:/var/www/html/
+              network_mode:
+                  bridge
+
+volumes:
+      myapp:
