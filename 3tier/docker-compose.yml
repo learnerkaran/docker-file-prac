@@ -1,0 +1,28 @@
+services:
+      databasedeploy:
+              build: ./mariadb/
+              ports: 
+                - '3306:3306'
+              container_name: database-deploy
+              volumes:
+                - myapp:/var/lib/mysql
+              network_mode:
+                  bridge
+
+      databasedeploy:
+              build: ./backend/
+              ports: 
+                - '8080:8080'
+              container_name: database-deploy
+              network_mode:
+                  bridge               
+      
+      databasedeploy:
+              build: ./frontend/
+              ports: 
+                - '80:80'
+              container_name: database-deploy
+              network_mode:
+                  bridge 
+volumes:
+      myapp:
