@@ -9,7 +9,7 @@ services:
               network_mode:
                   bridge
 
-      databasedeploy:
+      backenddeploy:
               build: ./backend/
               ports: 
                 - '8080:8080'
@@ -17,7 +17,7 @@ services:
               network_mode:
                   bridge               
       
-      databasedeploy:
+      frontenddeploy:
               build: ./frontend/
               ports: 
                 - '80:80'
