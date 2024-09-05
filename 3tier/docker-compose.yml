@@ -13,7 +13,7 @@ services:
               build: ./backend/
               ports: 
                 - '8080:8080'
-              container_name: database-deploy
+              container_name: backend-deploy
               network_mode:
                   bridge               
       
@@ -21,7 +21,7 @@ services:
               build: ./frontend/
               ports: 
                 - '80:80'
-              container_name: database-deploy
+              container_name: frontend-deploy
               network_mode:
                   bridge 
 volumes:
